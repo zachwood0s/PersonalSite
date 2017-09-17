@@ -27,8 +27,15 @@
 </section>
 
 <section id="#timeline">
+
 <div class="content">
 
+<div class="title">
+
+# > The Story of Me
+###   Only the important stuff
+
+</div>
 
 <div class="branch" id="master">
 
@@ -75,6 +82,31 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet ligu
 Nullam et sem volutpat, consectetur dui vel, volutpat orci. Fusce dapibus lectus eu risus dictum dictum. Proin malesuada massa a enim varius, eget pharetra velit ultricies. Aenean felis odio, pretium non eleifend in, varius quis felis. Donec pretium nisi lectus, at condimentum nulla accumsan vitae. Quisque at aliquet massa. Donec quis tempus nunc. Nulla facilisi. Phasellus id aliquet elit, vehicula aliquet mi. Sed tempor mauris nec urna ornare consequat.
 
 </div>
+
+<div class="commit education">
+<div class="fill work"></div>
+
+# Commit #1: Graduated High School
+## May 2016
+----
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet ligula eu orci tristique mollis et nec nunc. Quisque scelerisque sagittis lacus, in convallis mauris mattis vel. Sed rhoncus, massa ac consectetur aliquet, purus purus pulvinar tortor, non bibendum urna quam eu sapien. Phasellus ut enim in erat porta blandit vel sit amet diam. Pellentesque laoreet ligula a leo tincidunt, at iaculis quam eleifend. Maecenas finibus elementum est, eu maximus justo tincidunt eu. In congue laoreet orci. Proin vulputate nunc a sapien pellentesque, ac lobortis eros posuere. Phasellus lobortis mauris et massa fermentum eleifend.
+
+Nullam et sem volutpat, consectetur dui vel, volutpat orci. Fusce dapibus lectus eu risus dictum dictum. Proin malesuada massa a enim varius, eget pharetra velit ultricies. Aenean felis odio, pretium non eleifend in, varius quis felis. Donec pretium nisi lectus, at condimentum nulla accumsan vitae. Quisque at aliquet massa. Donec quis tempus nunc. Nulla facilisi. Phasellus id aliquet elit, vehicula aliquet mi. Sed tempor mauris nec urna ornare consequat.
+
+</div>
+
+<div class="commit work">
+<div class="fill education"></div>
+
+# Commit #3: Started Job 2
+## May 2016
+----
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet ligula eu orci tristique mollis et nec nunc. Quisque scelerisque sagittis lacus, in convallis mauris mattis vel. Sed rhoncus, massa ac consectetur aliquet, purus purus pulvinar tortor, non bibendum urna quam eu sapien. Phasellus ut enim in erat porta blandit vel sit amet diam. Pellentesque laoreet ligula a leo tincidunt, at iaculis quam eleifend. Maecenas finibus elementum est, eu maximus justo tincidunt eu. In congue laoreet orci. Proin vulputate nunc a sapien pellentesque, ac lobortis eros posuere. Phasellus lobortis mauris et massa fermentum eleifend.
+
+Nullam et sem volutpat, consectetur dui vel, volutpat orci. Fusce dapibus lectus eu risus dictum dictum. Proin malesuada massa a enim varius, eget pharetra velit ultricies. Aenean felis odio, pretium non eleifend in, varius quis felis. Donec pretium nisi lectus, at condimentum nulla accumsan vitae. Quisque at aliquet massa. Donec quis tempus nunc. Nulla facilisi. Phasellus id aliquet elit, vehicula aliquet mi. Sed tempor mauris nec urna ornare consequat.
+
+</div>
+
 <div class="commit work final">
 <div class="fill education"></div>
 
