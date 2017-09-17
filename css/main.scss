@@ -22,21 +22,20 @@ $background_light: #eee;
     background-color:$background_dark;
     color:$background_light;
 }
-%strike_through{
+@mixin strike_through($color, $thickness){
     position:relative;
     &:before{
         content:"";
         position:absolute;
         right:-5%;
-        top:50%;
-        height:2px;
+        top:calc(50% - #{$thickness / 2});
+        height:$thickness;
         width:0;
-        background:$background_light;
-        transition: width .3s;
+        background:$color;
+        transition: width .2s;
     }
     &:hover:before{
         width:110%;
-
     }
 }
 
@@ -49,9 +48,14 @@ a{
 }
 section{
 
+    color:$background_dark;
     .title{
         @extend %monospace;
 
+        a{
+            color:$background_dark;
+            @include strike_through($accent1, 4px);
+        }
         h1{
             margin-top:2.5em;
         }
@@ -73,28 +77,23 @@ section{
     }
     
 
-    min-height:200px;
+    min-height:calc(100% - 185px);
     width:100%;
 
     &:nth-child(1){
         @extend %background_dark;
-        height:80%;
         position:relative;
         display:flex;
         align-items:center;
         justify-content: center;
 
         p{
-            a{
-                color:$accent4;
-                font-weight: bold;
-                @extend %strike_through;
-            }
-            color:$accent4;
             position:absolute;
             bottom:10px;
 
             #downarrow{
+                width:100px;
+                height:40px;
                 fill:$accent4;
             }
         }
@@ -109,12 +108,13 @@ section{
             content: "";
             width:2px;
             position: absolute;
-            right:47%;
+            right:50%;
             height:100%;
             background: $accent1;
         }
         h2, h3{
-            width:50%;
+            width:calc(50% - 20px);
+            padding-right:30px;
             text-align: right;
         }
         h2{
@@ -215,13 +215,17 @@ section{
         height:calc(100% + 90px);
     }
 
+    &.education.final:after{
+        top:55px;
+    }
     &.work{
         &:before, &:after{
             background:$accent3;
             left:-61px;
+            top:55px;
         }
         &:after{
-            left:-63px;
+            left:-63px;  
         }
         
         h2:before{
@@ -245,6 +249,12 @@ section{
     }
     &.final:before{
         height:calc(100% - 50px);
+    }
+    &.final:after, &.final:before{
+        top:54px;
+    }
+    &.final{
+        margin-bottom:50px;
     }
 
     .fill{
@@ -321,7 +331,8 @@ section{
     border-style: none none solid none;
     margin-left:-95px;
     margin-top:-60px;
-    top:40px;
+    margin-bottom:50px;
+    top:10px;
     position:relative;
 
     &.education{
@@ -361,4 +372,5 @@ section{
     &.work:before{
         right:60px;
     }
+
 }
