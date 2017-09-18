@@ -15,6 +15,53 @@ body {
 a {
   text-decoration: none; }
 
+#navSlider {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  border-top: 4px solid #282c34; }
+  #navSlider a {
+    display: inline-block;
+    position: relative;
+    margin-right: 32.5px;
+    top: -9px;
+    width: 8px;
+    height: 8px;
+    border: 3px solid #282c34;
+    background: #eee;
+    border-radius: 50%; }
+    #navSlider a:last-child {
+      margin-right: 0; }
+  #navSlider #track {
+    height: 1px;
+    position: absolute;
+    width: 188px;
+    left: 3px; }
+  #navSlider #dot {
+    position: absolute;
+    top: -6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #282c34;
+    z-index: 2;
+    left: 0px; }
+
+blockquote {
+  border-left: 4px solid #cb9560;
+  padding: 10px;
+  margin-top: 0px;
+  position: relative; }
+  blockquote.tldr:before {
+    content: "TL;DR";
+    position: absolute;
+    left: -45px;
+    transform: rotate(-90deg) translateX(18%);
+    color: #cb9560;
+    font-size: 1.3em;
+    top: 50%; }
+
 section {
   color: #282c34;
   min-height: calc(100% - 185px);
@@ -57,7 +104,10 @@ section {
       section:nth-child(1) p #downarrow {
         width: 100px;
         height: 40px;
-        fill: #59a2e2; }
+        fill: #59a2e2;
+        transition: fill .3s; }
+        section:nth-child(1) p #downarrow:hover {
+          fill: #eee; }
   section header {
     width: 700px;
     position: relative; }
@@ -83,6 +133,7 @@ section {
   section .content {
     display: flex;
     width: 60%;
+    min-width: 650px;
     margin-left: 20%;
     flex-flow: row wrap; }
     section .content .title {

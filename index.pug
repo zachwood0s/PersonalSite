@@ -3,8 +3,9 @@ html
         title Zach Woods's Resume
         style @import url(css/main.css);
 
+        script(src = 'js/jquery-3.2.1.min.js')
     body
-        section
+        section#top
             header
                 h2 Zach Woods
                 h3 Professional College Student
@@ -22,11 +23,11 @@ html
                 .title
                     h1 
                         a(href='#about') > About Me
-                    h3 The TL;DR Version
+                    h3 Everything you need to know
                 p
                     | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet ligula eu orci tristique mollis et nec nunc. Quisque scelerisque sagittis lacus, in convallis mauris mattis vel. Sed rhoncus, massa ac consectetur aliquet, purus purus pulvinar tortor, non bibendum urna quam eu sapien. Phasellus ut enim in erat porta blandit vel sit amet diam. Pellentesque laoreet ligula a leo tincidunt, at iaculis quam eleifend. Maecenas finibus elementum est, eu maximus justo tincidunt eu. In congue laoreet orci. Proin vulputate nunc a sapien pellentesque, ac lobortis eros posuere. Phasellus lobortis mauris et massa fermentum eleifend.
 
-                blockquote I grew up in Wichita
+                blockquote.tldr In congue laoreet orci. Proin vulputate nunc a sapien pellentesque, ac lobortis eros posuere. Phasellus lobortis mauris et massa fermentum eleifend.
         
         section#timeline
             .content
@@ -91,3 +92,18 @@ html
                             | Nullam et sem volutpat, consectetur dui vel, volutpat orci. Fusce dapibus lectus eu risus dictum dictum. Proin malesuada massa a enim varius, eget pharetra velit ultricies. Aenean felis odio, pretium non eleifend in, varius quis felis. Donec pretium nisi lectus, at condimentum nulla accumsan vitae. Quisque at aliquet massa. Donec quis tempus nunc. Nulla facilisi. Phasellus id aliquet elit, vehicula aliquet mi. Sed tempor mauris nec urna ornare consequat.
 
                     .push.work
+    section#projects
+    section#hirePls
+
+
+    #navSlider     
+        #track
+            #dot
+        a(href="#top")
+        a(href="#about")
+        a(href="#timeline")
+        a(href="#projects")
+        a(href="#hirePls")
+
+
+    script(src = 'js/main.js')
