@@ -49,18 +49,40 @@ a {
     left: 0px; }
 
 blockquote {
-  border-left: 4px solid #cb9560;
+  border-left: 4px solid #59a2e2;
   padding: 10px;
   margin-top: 0px;
   position: relative; }
-  blockquote.tldr:before {
-    content: "TL;DR";
+  blockquote:before {
     position: absolute;
     left: -45px;
     transform: rotate(-90deg) translateX(18%);
-    color: #cb9560;
+    color: #59a2e2;
     font-size: 1.3em;
-    top: 50%; }
+    top: 50%;
+    font-weight: bold; }
+  blockquote.tldr:before {
+    content: "TL;DR"; }
+  blockquote.classes:before {
+    content: "CLASSES";
+    transform: rotate(-90deg) translateX(14%);
+    font-size: 1.1em;
+    left: -50px; }
+
+table {
+  width: 100%; }
+  table thead td {
+    font-weight: bold;
+    color: #d0646d;
+    text-transform: uppercase;
+    text-align: center; }
+  table tbody td {
+    padding: 2px;
+    font-size: .9em; }
+    table tbody td:before {
+      content: "- ";
+      font-weight: bold;
+      color: #97c475; }
 
 section {
   color: #282c34;
@@ -104,7 +126,7 @@ section {
       section:nth-child(1) p #downarrow {
         width: 100px;
         height: 40px;
-        fill: #59a2e2;
+        fill: #d0646d;
         transition: fill .3s; }
         section:nth-child(1) p #downarrow:hover {
           fill: #eee; }
@@ -113,7 +135,7 @@ section {
     position: relative; }
     section header:before {
       content: "";
-      width: 2px;
+      width: 3px;
       position: absolute;
       right: 50%;
       height: 100%;

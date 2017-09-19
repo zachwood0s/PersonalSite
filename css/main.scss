@@ -88,20 +88,54 @@ a{
     
 }
 blockquote{
-    border-left: 4px solid $accent5;
+    border-left: 4px solid $accent4;
     padding:10px;
     margin-top:0px;
     position: relative;
-    &.tldr:before{
-        content:"TL;DR";
+    &:before{
         position:absolute;
         left:-45px;
         transform: rotate(-90deg) translateX(18%);
-        color:$accent5;
+        color:$accent4;
         font-size:1.3em;
         top:50%;
+        font-weight: bold;
+    }
+    &.tldr:before{
+        content:"TL;DR";
+    }
+    &.classes:before{
+        content:"CLASSES";
+        transform: rotate(-90deg) translateX(14%);
+        font-size:1.1em;
+        left:-50px;
     }
 }
+
+table{
+    width:100%;
+    thead{
+        td{
+            font-weight:bold;
+            color: $accent1;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    tbody{
+
+        td{
+            padding:2px;
+            font-size:.9em;
+            &:before{
+                content:"- ";
+                font-weight:bold;
+                color:$accent3;
+            }
+        }
+    }
+}
+
 section{
 
     color:$background_dark;
@@ -150,7 +184,7 @@ section{
             #downarrow{
                 width:100px;
                 height:40px;
-                fill:$accent4;
+                fill:$accent1;
                 transition:fill .3s;
                 &:hover{
                     fill:$background_light;
@@ -166,7 +200,7 @@ section{
 
         &:before{
             content: "";
-            width:2px;
+            width:3px;
             position: absolute;
             right:50%;
             height:100%;
