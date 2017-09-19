@@ -5,7 +5,7 @@ section .title, section header {
 body {
   font-family: 'Ubuntu', sans-serif; }
 
-section:nth-child(1) {
+section#top {
   background-color: #282c34;
   color: #eee; }
 
@@ -63,6 +63,8 @@ blockquote {
     font-weight: bold; }
   blockquote.tldr:before {
     content: "TL;DR"; }
+  blockquote.skills:before {
+    content: "SKILLS"; }
   blockquote.classes:before {
     content: "CLASSES";
     transform: rotate(-90deg) translateX(14%);
@@ -74,15 +76,43 @@ table {
   table thead td {
     font-weight: bold;
     color: #d0646d;
-    text-transform: uppercase;
-    text-align: center; }
+    text-transform: uppercase; }
   table tbody td {
     padding: 2px;
     font-size: .9em; }
-    table tbody td:before {
+    table tbody td .dash:before {
       content: "- ";
       font-weight: bold;
       color: #97c475; }
+  table td.skill {
+    width: 350px; }
+    table td.skill .title {
+      width: 100px;
+      display: inline-block; }
+    table td.skill .bar {
+      width: 120px;
+      border: 2px solid #282c34;
+      height: 10px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      display: inline-block;
+      position: relative; }
+      table td.skill .bar:before {
+        content: "";
+        height: 6px;
+        background: #282c34;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%; }
+      table td.skill .bar._20:before {
+        width: 20%; }
+      table td.skill .bar._40:before {
+        width: 40%; }
+      table td.skill .bar._60:before {
+        width: 60%; }
+      table td.skill .bar._80:before {
+        width: 80%; }
 
 section {
   color: #282c34;
@@ -115,20 +145,21 @@ section {
     margin-top: 0px;
     margin-left: 32px;
     margin-bottom: 2em; }
-  section:nth-child(1) {
+  section#top {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center; }
-    section:nth-child(1) p {
+    justify-content: center;
+    overflow: hidden; }
+    section#top p {
       position: absolute;
       bottom: 10px; }
-      section:nth-child(1) p #downarrow {
+      section#top p #downarrow {
         width: 100px;
         height: 40px;
         fill: #d0646d;
         transition: fill .3s; }
-        section:nth-child(1) p #downarrow:hover {
+        section#top p #downarrow:hover {
           fill: #eee; }
   section header {
     width: 700px;
@@ -199,7 +230,8 @@ section {
   .commit h1 {
     margin-bottom: 10px; }
   .commit h2 {
-    font-size: 1em; }
+    font-size: 1em;
+    text-transform: uppercase; }
     .commit h2:before {
       content: "";
       position: absolute;

@@ -104,6 +104,10 @@ blockquote{
     &.tldr:before{
         content:"TL;DR";
     }
+    &.skills:before{
+        content:"SKILLS";
+
+    }
     &.classes:before{
         content:"CLASSES";
         transform: rotate(-90deg) translateX(14%);
@@ -119,7 +123,6 @@ table{
             font-weight:bold;
             color: $accent1;
             text-transform: uppercase;
-            text-align: center;
         }
     }
     tbody{
@@ -127,10 +130,52 @@ table{
         td{
             padding:2px;
             font-size:.9em;
-            &:before{
+
+            .dash:before{
                 content:"- ";
                 font-weight:bold;
                 color:$accent3;
+            }
+        }
+    }
+
+
+    td.skill{
+        width:350px;
+
+        .title{
+            width: 100px;
+            display:inline-block;
+        }
+        .bar{
+            width:120px;
+            border:2px solid $background_dark;
+            height:10px;
+            box-sizing:border-box;
+            border-radius: 5px;
+            display:inline-block;
+            position:relative;
+
+            &:before{
+                content:"";
+                height:6px;
+                background:$background_dark;
+                position:absolute;
+                left:0;
+                top:0;
+                width:0%;
+            }
+            &._20:before{
+                width:20%;
+            }
+            &._40:before{
+                width:40%;
+            }
+            &._60:before{
+                width:60%;
+            }
+            &._80:before{
+                width:80%;
             }
         }
     }
@@ -170,7 +215,7 @@ section{
     min-height:calc(100% - 185px);
     width:100%;
 
-    &:nth-child(1){
+    &#top{
         @extend %background_dark;
         position:relative;
         display:flex;
@@ -191,6 +236,8 @@ section{
                 }
             }
         }
+        overflow:hidden;
+
     }
 
     header{
@@ -285,6 +332,7 @@ section{
     }
     h2{
         font-size:1em;
+        text-transform: uppercase;
 
         &:before{
             content:"";
