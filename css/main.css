@@ -52,7 +52,8 @@ blockquote {
   border-left: 4px solid #59a2e2;
   padding: 10px;
   margin-top: 0px;
-  position: relative; }
+  position: relative;
+  width: 100%; }
   blockquote:before {
     position: absolute;
     left: -45px;
@@ -70,6 +71,9 @@ blockquote {
     transform: rotate(-90deg) translateX(14%);
     font-size: 1.1em;
     left: -50px; }
+  blockquote.info:before {
+    left: -40px;
+    content: "INFO"; }
 
 table {
   width: 100%; }
