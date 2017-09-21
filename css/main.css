@@ -5,9 +5,11 @@ section .title, section header {
 body {
   font-family: 'Ubuntu', sans-serif; }
 
-section#top {
+section#top, section#hirepls {
   background-color: #282c34;
   color: #eee; }
+  section#top a, section#hirepls a {
+    color: #eee; }
 
 body {
   margin: 0px; }
@@ -15,12 +17,19 @@ body {
 a {
   text-decoration: none; }
 
+.button {
+  padding: 10px;
+  border: 3px solid #d0646d;
+  color: #d0646d !important;
+  font-weight: bold; }
+
 #navSlider {
   position: fixed;
   bottom: 20px;
   right: 20px;
   width: 200px;
-  border-top: 4px solid #282c34; }
+  border-top: 4px solid #282c34;
+  transition: border .3s; }
   #navSlider a {
     display: inline-block;
     position: relative;
@@ -30,7 +39,8 @@ a {
     height: 8px;
     border: 3px solid #282c34;
     background: #eee;
-    border-radius: 50%; }
+    border-radius: 50%;
+    transition: all .3s; }
     #navSlider a:last-child {
       margin-right: 0; }
   #navSlider #track {
@@ -45,8 +55,16 @@ a {
     height: 8px;
     border-radius: 50%;
     background: #282c34;
+    transition: background .3s;
     z-index: 2;
     left: 0px; }
+  #navSlider.light {
+    border-color: #eee; }
+    #navSlider.light #dot {
+      background: #eee; }
+    #navSlider.light a {
+      border-color: #eee;
+      background: #282c34; }
 
 blockquote {
   border-left: 4px solid #59a2e2;
@@ -71,9 +89,20 @@ blockquote {
     transform: rotate(-90deg) translateX(14%);
     font-size: 1.1em;
     left: -50px; }
-  blockquote.info:before {
-    left: -40px;
-    content: "INFO"; }
+  blockquote.info {
+    margin-top: 16px;
+    line-height: 1.5em; }
+    blockquote.info span {
+      display: inline-block;
+      width: 120px;
+      font-weight: bold; }
+      blockquote.info span:before {
+        content: "- ";
+        font-weight: bold;
+        color: #97c475; }
+    blockquote.info:before {
+      left: -40px;
+      content: "INFO"; }
 
 table {
   width: 100%; }
@@ -149,8 +178,9 @@ section {
     margin-top: 0px;
     margin-left: 32px;
     margin-bottom: 2em; }
+  section#top, section#hirepls {
+    position: relative; }
   section#top {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,6 +195,14 @@ section {
         transition: fill .3s; }
         section#top p #downarrow:hover {
           fill: #eee; }
+  section#hirepls {
+    min-height: 175px; }
+    section#hirepls .content {
+      position: relative; }
+    section#hirepls .button {
+      top: 75px;
+      position: absolute;
+      right: 0; }
   section header {
     width: 700px;
     position: relative; }

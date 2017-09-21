@@ -40,6 +40,19 @@ $('a[href*="#"]')
         //console.log(id);
     }
 
+    var contact = document.getElementById("hirePls");
+
+    function watchNavColor(){
+        if(window.scrollY > contact.offsetTop - window.innerHeight){
+            nav.classList.add("light");
+        }
+        else{
+            if(nav.classList.contains("light")){
+                nav.classList.remove("light");
+            }
+        }
+    }
+
     function moveDot(){
 
         for(var i = 0; i<positions.length-1; i++){
@@ -67,8 +80,10 @@ $('a[href*="#"]')
 
     window.onscroll = function(){
         moveDot();
+        watchNavColor();
     }
     window.onload = function(){
         moveDot();
+        watchNavColor();
     }
 })();
